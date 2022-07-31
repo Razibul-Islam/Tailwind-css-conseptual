@@ -1,13 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: '#FECC02',
+                        offblack: '#131313',
+                        gray: '#4E4E4E',
+                    },
+                    fontFamily: {
+                        bebas: ["Bebas Neue", "cursive"],
+                        mont: ["Montserrat", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'banner': "url('./images/banner.jpg')",
+                        'camera': "url('./images/camera-man.jpg')",
+                    },
+                    height: {
+                        'bg-img': '31.25rem',
+                    },
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-    <h1 class="bg-slate-600 text-white">Hello</h1>
+    <nav class="flex justify-between items-center h-24 md:px-28 px-4 font-bebas bg-white absolute w-full">
+        <h1 class="md:text-3xl text-base cursor-pointer">Jhaka Naka Production</h1>
+        <ul class="md:flex gap-3 text-lg cursor-pointer hidden">
+            <li>About Us</li>
+            <li>Our Movies</li>
+            <li>Services</li>
+        </ul>
+        <img src="images/icons/menu.png" class="md:hidden block">
+    </nav>
+    <main>
+        <!-- Landing Section -->
+        <section class="bg-banner bg-cover h-screen pt-24 flex items-center">
+            <div class="font-bebas md:ml-20 ml-10 text-white">
+                <p class="text-lg">Movie production studio</p>
+                <h1 class="md:text-7xl text-5xl">Films MAde to<br><span class="text-yellow">Perfection</span></h1>
+                <p class="font-mont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,<br>
+                    luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                <button
+                    class="border-2 px-5 py-3 mt-9 text-lg transition ease-linear hover:bg-yellow hover:text-black hover:border-yellow">Discover
+                    More</button>
+            </div>
+        </section>
+        <!-- About Us -->
+        <section class="md:m-20 m-1 border-2">
+            <div class="md:flex block">
+                <div class="md:w-2/4 w-full bg-camera h-bg-img bg-cover md:m-10 m-0 bg-center flex justify-center items-end">
+                    <h1 class="py-4 md:px-28 px-14 rounded bg-white shadow-md text-bebas md:text-3xl text-xl font-bold -mb-7">23 YEARS of EXPERIENCE</h1>
+                </div>
+                <div class="md:m-10 m-0 md:w-2/4 mt-8 pl-3 w-full text-offblack font-bebas">
+                    <p class="text-2xl">ABOUT US</p>
+                    <h1 class="md:text-7xl text-4xl">FIlming Experience<br>Just Got better</h1>
+                    <p class="font-mont">Primis lobortis adipiscing imperdiet dis ultricies. Id commodo interdum fermentum pede dictumst
+                        ipsum. Erat sapien phasellus suspendisse natoque nulla leo ornare mi. Pretium rhoncus venenatis
+                        ante dignissim aliquet faucibus tempus etiam feugiat.</p>
+                    <button
+                        class="border-2 px-5 py-3 mt-9 text-lg transition ease-linear hover:bg-yellow hover:border-yellow">Discover
+                        More</button>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 grid-cols-1 text-offblack">
+                <div class="m-5 md:shadow-none shadow">
+                    <h1 class="text-5xl md:border-t-4 font-bebas">OUR VISION</h1>
+                    <p class="font-mont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="m-5 md:shadow-none shadow">
+                    <h1 class="text-5xl md:border-t-4 font-bebas">OUR Mission</h1>
+                    <p class="font-mont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="m-5 md:shadow-none shadow">
+                    <h1 class="text-5xl md:border-t-4 font-bebas">OUR Motto</h1>
+                    <p class="font-mont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
 </body>
+
 </html>
